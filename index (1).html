@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>I’m sorry, Shreya</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500;1,600&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#0d1830;--night2:#17294d;--sky:#8cc3ec;--gold:#d8b15a;--blush:#f4d6d0;--ink:#eaf1fb;--paper:#f2f5fa;--pink:#1b2b4b;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--paper:#101d38;--pink:#e9eef8}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--night);color:var(--ink);font:400 1.05rem/1.7 Manrope,system-ui,sans-serif;overflow-x:hidden}
+.serif,h1,h2{font-family:"Cormorant Garamond",Georgia,serif;font-style:italic;font-weight:500}
+.hero{min-height:100vh;position:relative;display:flex;flex-direction:column;align-items:center;padding:2.6rem 1rem 0;text-align:center;background:radial-gradient(60% 45% at 50% 62%,#27457a 0,transparent 70%),linear-gradient(#0d1830,#13234a 70%,#1a2f5a)}
+.hero:before{content:"";position:absolute;width:min(78vw,560px);aspect-ratio:1;left:50%;top:34%;transform:translateX(-50%);border-radius:50%;border:1px solid #8cc3ec33;box-shadow:0 0 0 38px #8cc3ec0d,0 0 0 90px #8cc3ec08}
+h1{font-size:clamp(2.8rem,9vw,6rem);line-height:1;margin:0;color:#fff;position:relative}
+.lede{max-width:30rem;margin:.9rem auto 0;color:#c4d3ea;position:relative}
+.scene{position:relative;display:flex;justify-content:center;align-items:flex-end;gap:clamp(.2rem,5vw,3.5rem);margin-top:auto;padding-top:1.5rem;transition:gap 1.4s cubic-bezier(.4,0,.2,1)}
+.scene svg{width:min(32vw,255px);height:auto;overflow:visible;display:block;transition:transform 1.2s ease;transform-origin:50% 100%}.scene svg.m{width:min(20vw,125px)}.scene svg :is(path,ellipse,rect,circle)[fill]:not([fill=none]):not([fill="#0006"]){stroke:#1b1636;stroke-width:1.7;stroke-linejoin:round}.mq{transform-origin:60px 136px;animation:mq 2.4s ease-in-out infinite}@keyframes mq{0%,14%,86%,100%{transform:translateY(0) scaleY(1)}50%{transform:translateY(22px) scaleY(.8)}}.kiss{display:none;position:absolute;left:50%;top:20%;transform:translateX(-50%);font-size:3rem;animation:pop 1.2s ease-in-out infinite;z-index:3}.done .kiss{display:block}@keyframes pop{50%{transform:translateX(-50%) scale(1.35)}}.done .mq{animation:jump .8s ease-in-out infinite}@keyframes jump{50%{transform:translateY(-14px)}}.done #dsv{transform:translateX(20px) rotate(7deg)}.done #shreya{transform:translateX(-20px) rotate(-7deg)}.gifts{display:none;background:var(--paper);color:var(--pink);padding:clamp(3rem,8vw,6rem) 1.2rem;text-align:center}.done .gifts{display:block}.gifts h2{font-size:clamp(2rem,6vw,3.4rem);margin:0 0 .5rem}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;max-width:880px;margin:2rem auto 1rem}.g{font:inherit;color:inherit;background:#8cc3ec22;border:1.5px solid #8cc3ec88;border-radius:18px;padding:1.2rem 1rem;cursor:pointer;transition:transform .3s,background .3s}.g:hover,.g.on{transform:translateY(-4px);background:#d8b15a44;border-color:#d8b15a}.g:focus-visible{outline:3px solid var(--pink)}.g i{display:block;font-style:normal;font-size:2.2rem}.g b{display:block;margin-top:.3rem}.g small{opacity:.8}#pick{min-height:3rem;font-weight:700}
+.floor{position:absolute;left:-10vw;right:-10vw;bottom:0;height:34px;background:linear-gradient(#0000,#07101f)}
+.chip{position:absolute;left:50%;top:-.2rem;transform:translateX(-50%);background:#ffffff14;border:1px solid #ffffff2e;border-radius:99px;padding:.25rem 1rem;font-size:.9rem;white-space:nowrap;backdrop-filter:blur(6px)}
+.hint{position:absolute;bottom:.8rem;left:0;right:0;font-size:.85rem;color:#9fb4d4;z-index:2}
+.up{animation:dn 2.4s ease-in-out infinite}.legs{transform-origin:120px 438px;animation:sq 2.4s ease-in-out infinite}
+@keyframes dn{0%,14%,86%,100%{transform:translateY(0)}50%{transform:translateY(79px)}}
+@keyframes sq{0%,14%,86%,100%{transform:scaleY(1)}50%{transform:scaleY(.66)}}
+.hugarm,.hf{display:none}
+.done .hugarm,.done .hf{display:inline}.done .earm,.done .fold,.done .sf{display:none}.done .up,.done .legs{animation:none}.done .scene{gap:clamp(-4.5rem,-12vw,-2rem)}
+.letter{background:var(--paper);color:var(--pink);padding:clamp(3rem,9vw,7rem) 1.4rem}
+.wrap{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(1.5rem,5vw,4rem)}
+.letter h2{font-size:clamp(2rem,5vw,3.2rem);line-height:1.1;margin:0}
+.letter p{margin:0 0 1rem}
+.ask{background:linear-gradient(var(--night2),var(--night));padding:clamp(3.5rem,10vw,7rem) 1.2rem 5rem;text-align:center}
+.ask h2{font-size:clamp(2.2rem,7vw,4.2rem);margin:0 0 .4rem;color:#fff}
+.ask p{margin:0 auto;max-width:26rem;color:#b9cae4}
+.acts{display:flex;justify-content:center;align-items:center;gap:1.6rem;height:220px;margin-top:1rem}
+.b{font:700 1.05rem Manrope,system-ui,sans-serif;border-radius:99px;padding:.95rem 2.2rem;cursor:pointer;border:1.5px solid;transition:transform .5s cubic-bezier(.3,1.4,.5,1),opacity .4s}
+.b:focus-visible{outline:3px solid #fff;outline-offset:3px}
+#yes{background:var(--gold);border-color:var(--gold);color:#241a05;position:relative;z-index:2}
+#no{background:transparent;border-color:#8cc3ec;color:var(--sky)}
+.fall{position:fixed;top:-3rem;pointer-events:none;z-index:20;animation:fl linear forwards}
+@keyframes fl{to{transform:translateY(112vh) rotate(300deg)}}
+@media (max-width:640px){.wrap{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.up,.legs{animation:none}.scene{transition:none}}
+.sur{max-width:420px;margin:2.5rem auto 0}.box{position:relative;width:200px;margin:1.2rem auto 0}.lid{height:34px;background:#e85d84;border:2px solid #1b1636;border-radius:8px;position:relative;transition:transform .7s cubic-bezier(.3,1.6,.5,1);transform-origin:left bottom;z-index:2}.lid:after{content:"";position:absolute;left:50%;top:-12px;width:22px;height:22px;margin-left:-11px;background:#d8b15a;border:2px solid #1b1636;border-radius:50%}.bd{height:110px;background:#f27a9c;border:2px solid #1b1636;border-top:0;border-radius:0 0 10px 10px;display:flex;align-items:center;justify-content:center;color:#fff;font:italic 500 1.5rem "Cormorant Garamond",serif;padding:0 .8rem}.box.open .lid{transform:translateY(-26px) rotate(-24deg)}.space{min-height:110px;margin:1.2rem 0;padding:1rem;border:2px dashed #8cc3ec;border-radius:16px;display:flex;flex-direction:column;gap:.5rem;justify-content:center;transition:background .3s}.space.angry{background:#ff4d5a26;border-color:#ff4d5a;font-weight:700}.it{background:#d8b15a33;border-radius:10px;padding:.4rem .8rem}.it.cp{border:2px dashed #d8b15a;font-weight:700}.row{display:flex;gap:1rem;justify-content:center}.yy{background:var(--gold);border-color:var(--gold);color:#241a05}.nn{background:transparent;border-color:#8cc3ec;color:var(--pink)}.mh{display:none}.done .mh{display:inline}.done .ms{display:none}.chip{top:auto;bottom:.5rem;z-index:3}
+</style></head><body>
+
+<header class="hero" id="top">
+ <h1 id="h">I’m sorry, Shreya.</h1>
+ <p class="lede" id="l">You were busy, I kept calling, and your mom scolded you. Please forgive me.</p>
+ <div class="scene" id="scene">
+  <div class="chip">Sit-ups so far: <b id="cnt">0</b></div>
+  <svg id="dsv" viewBox="0 -100 240 570" role="img" aria-label="Dipesh in an Argentina shirt doing sit-ups while holding his ears">
+   <defs><linearGradient id="sk" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f1bd9a"/><stop offset="1" stop-color="#d89873"/></linearGradient></defs>
+   <ellipse cx="120" cy="462" rx="84" ry="8" fill="#0006"/>
+   <g class="legs"><path d="M78 205H162L178 438H124L120 280L116 438H62Z" fill="#9cc6ec"/><path d="M120 280V438M78 205L72 330M162 205L168 330" stroke="#7aa9d6" stroke-width="2" fill="none" opacity=".7"/><path d="M62 424H116M124 424H178" stroke="#b9d9f5" stroke-width="3"/></g>
+   <path d="M58 440H118Q124 456 110 458H62Q50 452 58 440ZM182 440H122Q116 456 130 458H178Q190 452 182 440Z" fill="#fafcff"/><path d="M62 452H114M126 452H178" stroke="#c7d3e3" stroke-width="2"/>
+   <g class="up">
+    <g class="cl"><g fill="#fff"><circle cx="70" cy="-50" r="22"/><circle cx="100" cy="-68" r="26"/><circle cx="140" cy="-66" r="26"/><circle cx="170" cy="-46" r="22"/><circle cx="140" cy="-32" r="22"/><circle cx="100" cy="-30" r="22"/><circle cx="108" cy="-6" r="6"/><circle cx="112" cy="8" r="4"/></g><g fill="#fff"><circle cx="105" cy="-50" r="34"/><circle cx="140" cy="-50" r="30"/></g><text x="120" y="-52" text-anchor="middle" font-family="Cormorant Garamond,serif" font-style="italic" font-size="21" fill="#1b2b4b" stroke="none">I’m sorry</text><text x="120" y="-31" text-anchor="middle" font-family="Cormorant Garamond,serif" font-style="italic" font-size="21" fill="#d6456e" stroke="none">baby</text></g>
+    <g class="earm"><path d="M44 126L90 62M196 126L150 62" stroke="url(#sk)" stroke-width="13" stroke-linecap="round" fill="none"/><circle cx="90" cy="60" r="8" fill="#e6a985"/><circle cx="150" cy="60" r="8" fill="#e6a985"/><path d="M78 76L86 68M81 80L89 72" stroke="#111" stroke-width="2.4" stroke-linecap="round"/></g>
+    <path d="M70 98Q120 86 170 98L174 214H66Z" fill="#fff"/><g fill="#86bde9"><rect x="84" y="94" width="14" height="120"/><rect x="113" y="92" width="14" height="122"/><rect x="142" y="94" width="14" height="120"/></g>
+    <path d="M66 206H174V216H66Z" fill="#eef3f9"/>
+    <path d="M70 98Q86 90 98 90L112 86H128L142 90Q154 90 170 98" stroke="#14264a" stroke-width="5" fill="none"/>
+    <rect x="95" y="120" width="12" height="17" rx="3" fill="#d8b15a"/><path d="M148 118l8 3v8q0 5-8 8q-8-3-8-8v-8z" fill="#d8b15a"/>
+    <g class="earm"><path d="M74 108L48 124M166 108L192 124" stroke="#fff" stroke-width="26" stroke-linecap="round"/><path d="M42 116L52 136M198 116L188 136" stroke="#14264a" stroke-width="5" stroke-linecap="round"/></g>
+    <g class="hugarm"><path d="M168 108Q215 122 268 152" stroke="url(#sk)" stroke-width="13" stroke-linecap="round" fill="none"/><path d="M166 108L196 118" stroke="#fff" stroke-width="26" stroke-linecap="round"/></g>
+    <rect x="108" y="76" width="24" height="24" fill="#dfa27d"/>
+    <g transform="translate(120 60) scale(1.22) translate(-120 -60)"><ellipse cx="120" cy="58" rx="22" ry="27" fill="url(#sk)"/><circle cx="98" cy="61" r="5" fill="#e6a985"/><circle cx="142" cy="61" r="5" fill="#e6a985"/>
+    <path d="M96 56Q92 24 120 23Q148 24 144 56Q140 40 126 36Q108 38 96 56Z" fill="#15110f"/><path d="M104 32Q120 26 136 33" stroke="#3b312c" stroke-width="2" fill="none"/>
+    <ellipse cx="111" cy="60" rx="2.7" ry="3" fill="#15110f"/><ellipse cx="129" cy="60" rx="2.7" ry="3" fill="#15110f"/>
+    <g class="sf"><path d="M103 54L117 50M137 54L123 50" stroke="#15110f" stroke-width="2.6" stroke-linecap="round"/><path d="M113 78Q120 73 127 78" stroke="#8a4636" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M100 72q-3 6 0 9q3-3 0-9z" fill="#7ec9ff"/></g>
+    <g class="hf"><path d="M104 52Q111 47 117 52M123 52Q129 47 136 52" stroke="#15110f" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M110 72Q120 86 130 72Z" fill="#8a3a3a"/></g></g>
+   </g>
+  </svg>
+  <svg class="m" viewBox="0 0 120 150" role="img" aria-label="A little round robot friend doing sit-ups too"><ellipse cx="60" cy="144" rx="44" ry="6" fill="#0006"/><g class="mq"><path d="M26 98L32 44M94 98L88 44" stroke="#9fe0d6" stroke-width="11" stroke-linecap="round" fill="none"/><ellipse cx="32" cy="42" rx="7" ry="7" fill="#7cc9bf"/><ellipse cx="88" cy="42" rx="7" ry="7" fill="#7cc9bf"/><ellipse cx="42" cy="134" rx="14" ry="7" fill="#7cc9bf"/><ellipse cx="78" cy="134" rx="14" ry="7" fill="#7cc9bf"/><ellipse cx="60" cy="84" rx="42" ry="46" fill="#9fe0d6"/><ellipse cx="60" cy="102" rx="27" ry="26" fill="#f4fffd"/><path d="M60 112q-12-8-8-14q4-4 8 1q4-5 8-1q4 6-8 14z" fill="#ff7f9a"/><path d="M60 38V22" stroke="#1b1636" stroke-width="2.5"/><circle cx="60" cy="19" r="6" fill="#d8b15a"/><g class="ms"><ellipse cx="44" cy="68" rx="10" ry="12" fill="#fff"/><ellipse cx="76" cy="68" rx="10" ry="12" fill="#fff"/><circle cx="46" cy="70" r="5.5" fill="#1b1636" stroke="none"/><circle cx="74" cy="70" r="5.5" fill="#1b1636" stroke="none"/><circle cx="48" cy="67" r="2" fill="#fff" stroke="none"/><circle cx="76" cy="67" r="2" fill="#fff" stroke="none"/><path d="M52 86Q60 81 68 86" stroke="#1b1636" stroke-width="2.5" fill="none" stroke-linecap="round"/></g><g class="mh"><path d="M35 70Q44 58 53 70M67 70Q76 58 85 70" stroke="#1b1636" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M47 80Q60 100 73 80Z" fill="#ff7f9a"/><text x="92" y="28" font-size="16" stroke="none">✨</text><text x="6" y="36" font-size="14" stroke="none">✨</text></g><circle cx="34" cy="82" r="5" fill="#ff9db0" opacity=".6" stroke="none"/><circle cx="86" cy="82" r="5" fill="#ff9db0" opacity=".6" stroke="none"/></g></svg>
+  <svg viewBox="0 0 240 470" role="img" aria-label="Shreya in a blue kurti with folded arms, still a little upset" id="shreya">
+   <defs><linearGradient id="sk2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3c3a3"/><stop offset="1" stop-color="#dba07d"/></linearGradient>
+   <pattern id="ik" width="16" height="16" patternUnits="userSpaceOnUse" patternTransform="rotate(18)"><path d="M3 4q5-5 10 0q-5 5-10 0z" fill="#cfe0ff" opacity=".8"/><circle cx="12" cy="12" r="1.8" fill="#8fb4f0"/></pattern>
+   <linearGradient id="hr" x1="0" x2="1"><stop offset="0" stop-color="#0f0a09"/><stop offset=".5" stop-color="#2a1d19"/><stop offset="1" stop-color="#0f0a09"/></linearGradient></defs>
+   <ellipse cx="120" cy="462" rx="84" ry="8" fill="#0006"/>
+   <path d="M94 40Q62 130 80 250Q120 266 160 250Q178 130 146 40Z" fill="url(#hr)"/>
+   <path d="M84 238H156L160 438H124L120 296L116 438H80Z" fill="#3f6aa6"/><path d="M120 296V438" stroke="#2f5588" stroke-width="2"/>
+   <path d="M76 440H116Q122 456 108 458H80Q68 452 76 440ZM164 440H124Q118 456 132 458H160Q172 452 164 440Z" fill="#fafcff"/><path d="M80 452H112M128 452H160" stroke="#c7d3e3" stroke-width="2"/>
+   <path d="M80 100Q120 90 160 100L174 250Q120 266 66 250Z" fill="#1b3a82"/><path d="M80 100Q120 90 160 100L174 250Q120 266 66 250Z" fill="url(#ik)"/>
+   <path d="M66 250Q120 266 174 250" stroke="#dbe6ff" stroke-width="4" fill="none"/><path d="M71 232l-4 18M169 232l4 18" stroke="#0f2358" stroke-width="2"/>
+   <rect x="108" y="76" width="24" height="26" fill="#e0a581"/><path d="M108 98L120 126L132 98" fill="#e0a581" stroke="#dbe6ff" stroke-width="2.5"/>
+   <g class="fold"><path d="M64 176Q120 200 172 184M176 176Q120 200 68 184" stroke="url(#sk2)" stroke-width="13" stroke-linecap="round" fill="none"/>
+    <g fill="none" stroke-width="2.4" transform="rotate(8 150 192)"><ellipse cx="148" cy="192" rx="3" ry="7" stroke="#d8b15a"/><ellipse cx="153" cy="192" rx="3" ry="7" stroke="#ff7f9a"/><ellipse cx="158" cy="192" rx="3" ry="7" stroke="#8cc3ec"/><ellipse cx="143" cy="192" rx="3" ry="7" stroke="#d8b15a"/></g>
+    <g fill="none" stroke-width="2.4" transform="rotate(-8 90 192)"><ellipse cx="82" cy="192" rx="3" ry="7" stroke="#d8b15a"/><ellipse cx="87" cy="192" rx="3" ry="7" stroke="#ff7f9a"/><ellipse cx="92" cy="192" rx="3" ry="7" stroke="#8cc3ec"/><ellipse cx="97" cy="192" rx="3" ry="7" stroke="#d8b15a"/></g>
+    <path d="M82 104L58 176M158 104L182 176" stroke="#1b3a82" stroke-width="26" stroke-linecap="round"/><path d="M82 104L58 176M158 104L182 176" stroke="url(#ik)" stroke-width="26" stroke-linecap="round"/></g>
+   <g class="hugarm"><path d="M80 112Q40 128 -16 156" stroke="url(#sk2)" stroke-width="13" stroke-linecap="round" fill="none"/><path d="M84 110L54 124" stroke="#1b3a82" stroke-width="26" stroke-linecap="round"/><path d="M36 134l-8 0M20 142l-8 2" stroke="#ff7f9a" stroke-width="3"/></g>
+   <g transform="translate(120 60) scale(1.22) translate(-120 -60)"><ellipse cx="120" cy="58" rx="21" ry="26" fill="url(#sk2)"/>
+   <path d="M98 60Q92 22 120 21Q148 22 142 60Q140 38 122 33Q104 36 98 60Z" fill="#150f0d"/><path d="M120 22V36" stroke="#3a2b25" stroke-width="2"/>
+   <circle cx="120" cy="44" r="1.8" fill="#d7263d"/>
+   <path d="M99 70v8" stroke="#d8b15a" stroke-width="1.5"/><circle cx="99" cy="81" r="3.4" fill="#d8b15a"/><path d="M141 70v8" stroke="#d8b15a" stroke-width="1.5"/><circle cx="141" cy="81" r="3.4" fill="#d8b15a"/>
+   <ellipse cx="110" cy="60" rx="5" ry="3.4" fill="#fff"/><ellipse cx="130" cy="60" rx="5" ry="3.4" fill="#fff"/><circle cx="108.4" cy="60" r="2.5" fill="#2a1710"/><circle cx="128.4" cy="60" r="2.5" fill="#2a1710"/>
+   <g class="sf"><path d="M101 52L116 55M139 52L124 55" stroke="#150f0d" stroke-width="2.6" stroke-linecap="round"/><path d="M112 77Q120 80 129 74" stroke="#b0414f" stroke-width="2.8" fill="none" stroke-linecap="round"/></g>
+   <g class="hf"><path d="M103 53Q110 48 117 53M123 53Q130 48 137 53" stroke="#150f0d" stroke-width="2.6" fill="none" stroke-linecap="round"/><path d="M108 72Q120 88 132 72Z" fill="#a23645"/><circle cx="104" cy="72" r="5" fill="#ff7f9a" opacity=".4"/><circle cx="136" cy="72" r="5" fill="#ff7f9a" opacity=".4"/></g></g>
+  </svg>
+  <div class="kiss" aria-hidden="true">💋</div><div class="floor"></div>
+ </div>
+ <a class="hint" href="#letter" style="color:#9fb4d4;text-decoration:none">Scroll, he has something to say ↓</a>
+</header>
+
+<section class="letter" id="letter"><div class="wrap">
+ <h2>I should have waited.</h2>
+ <div>
+  <p>You told me you’d call when you were free, and I kept calling anyway. Your mom heard the ring and scolded you. I’m really sorry.</p>
+ </div>
+</div></section>
+
+<section class="ask" id="ask">
+ <h2 id="q">Will you forgive me?</h2>
+ <p id="s">Take your time. Dipesh isn’t going anywhere.</p>
+ <div class="acts" id="acts"><button class="b" id="yes">Yes</button><button class="b" id="no">No</button></div>
+</section>
+
+<section class="gifts" id="gifts"><h2>Your gifts</h2><p>Pick one, or open the secret box.</p>
+<div class="grid"><button class="g" data-t="your favourite chocolate"><i>🍫</i><b>Your favourite chocolate</b></button><button class="g" data-t="a movie date"><i>🎬</i><b>Movie date</b><small>You pick the film</small></button><button class="g" data-t="a golgappe and chai evening"><i>🥘</i><b>Golgappe and chai</b></button></div>
+<div class="sur"><h2 style="font-size:1.8rem;margin:.5rem 0">The secret surprise</h2><div class="box" id="box"><div class="lid"></div><div class="bd"><span id="bq">Am I your baby?</span></div></div><div class="space" id="space">Something is waiting here…</div><div class="row"><button class="b yy" id="sy">Yes</button><button class="b nn" id="sn">No</button></div></div>
+<p id="pick" aria-live="polite"></p></section>
+<script>
+var Q=["Will you forgive me?","Are you sure?","Look at him. He’s tired.","He’ll do fifty more.","One small yes?","He lost count a while ago.","The No button is giving up. Yes?"];
+var S=["Take your time. He will wait for your call this time.","He means every word of that letter.","His ears are very red now.","Think of the chocolates he’s planning.","Just one. He promises to call after you text.","Even the counter is begging.","Please, Shreya."];
+var N=["No","Still no?","No…","Really?","No!?","Hmm, no","Fine, no"];
+var n=0,c=0,yes=document.getElementById("yes"),no=document.getElementById("no");
+document.querySelector(".up").addEventListener("animationiteration",function(){c++;document.getElementById("cnt").textContent=c});
+no.addEventListener("click",function(){
+ n=Math.min(n+1,Q.length-1);
+ document.getElementById("q").textContent=Q[n];document.getElementById("s").textContent=S[n];
+ var w=document.getElementById("acts").clientWidth/2-no.offsetWidth/2-10,dir=n%2?1:-1;
+ var x=dir*Math.min(w,70+n*28),y=(n%3-1)*50;
+ no.textContent=(dir>0?"":"← ")+N[n]+(dir>0?" →":"");
+ no.style.transform="translate("+x+"px,"+y+"px) rotate("+(dir*6)+"deg) scale("+Math.max(.6,1-n*.06)+")";
+ yes.style.transform="scale("+Math.min(1.7,1+n*.12)+")";
+});
+yes.addEventListener("click",function(){
+ document.body.classList.add("done");
+ document.getElementById("shreya").parentNode.classList.add("done");
+ document.getElementById("scene").classList.add("done");document.getElementById("h").parentNode.classList.add("done");
+ document.getElementById("h").textContent="Thank you, Shreya.";
+ document.getElementById("l").textContent="Thank you, baby. I love you.";
+ document.getElementById("ask").style.display="none";
+ var e=["💋","🤗","💋","🤍","🥰","💋"];
+ for(var i=0;i<70;i++)(function(i){setTimeout(function(){
+  var d=document.createElement("div");d.className="fall";d.textContent=e[i%6];
+  d.style.left=Math.random()*95+"vw";d.style.fontSize=(1.4+Math.random()*2)+"rem";d.style.animationDuration=(3+Math.random()*3)+"s";
+  document.body.appendChild(d);setTimeout(function(){d.remove()},6500)},i*100)})(i);
+ window.scrollTo({top:0,behavior:"smooth"});
+});
+document.querySelectorAll(".g").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll(".g").forEach(function(x){x.classList.remove("on")});b.classList.add("on");document.getElementById("pick").textContent="Good choice: "+b.dataset.t+". Dipesh will plan it when you’re free."})});
+var BQ=["Am I your baby?","Are you sure? 🥺","Think again… am I your baby?","Last time: am I your baby?"],bi=0;
+document.getElementById("sy").addEventListener("click",function(){document.getElementById("box").classList.add("open");var sp=document.getElementById("space");sp.className="space";sp.innerHTML='<div class="it">🍫 Your favourite chocolate</div><div class="it">🎬 A movie date</div><div class="it">🥘 Golgappe and chai evening</div><div class="it cp">🎟️ Coupon: unlimited kisses and hugs, never expires</div>';document.querySelector(".row").style.display="none";document.getElementById("bq").textContent="Yes, you are 💗"});
+document.getElementById("sn").addEventListener("click",function(){bi=(bi+1)%BQ.length;var sp=document.getElementById("space");sp.className="space angry";sp.textContent="😠 Hmph. That is the wrong answer.";document.getElementById("bq").textContent=BQ[bi]});
+</script></body></html>
